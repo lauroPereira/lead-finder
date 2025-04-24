@@ -1,12 +1,11 @@
-# Define here the models for your scraped items
-#
-# See documentation in:
-# https://docs.scrapy.org/en/latest/topics/items.html
-
 import scrapy
 
-
 class LeadScraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    termo_busca = scrapy.Field()
+    estado = scrapy.Field()
+    cidade = scrapy.Field()
+    bairro = scrapy.Field()
+    nome = scrapy.Field()
+    endereco = scrapy.Field()
+    telefone = scrapy.Field()
+    website = scrapy.Field()

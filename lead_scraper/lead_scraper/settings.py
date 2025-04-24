@@ -14,10 +14,10 @@ NEWSPIDER_MODULE = "lead_scraper.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "lead_scraper (+http://www.yourdomain.com)"
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -62,9 +62,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "lead_scraper.pipelines.LeadScraperPipeline": 300,
-#}
+ITEM_PIPELINES = {
+    'lead_scraper.pipelines.ExcelExportPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -90,3 +90,4 @@ ROBOTSTXT_OBEY = True
 # Set settings whose default value is deprecated to a future-proof value
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+LOG_LEVEL = 'DEBUG'
