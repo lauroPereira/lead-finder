@@ -15,6 +15,7 @@ Este projeto realiza extração automatizada (**web scraping**) de informações
 - Extração direta para **arquivo Excel**.
 
 ## 📂 Estrutura do Projeto
+```
 lead-finder/
 ├── .venv/                        # Ambiente virtual Python
 ├── data/                         # Pasta para armazenar dados externos ou temporários
@@ -35,6 +36,7 @@ lead-finder/
 ├── .gitignore
 ├── README.md
 └── requirements.txt              # Dependências do projeto
+```
 
 ## 🚀 Instalação
 
@@ -75,9 +77,11 @@ Os resultados serão salvos automaticamente em arquivos Excel na pasta results/,
 
 Exemplo de saída:
 
-Termo	Estado	Cidade	Bairro	Nome	Endereço	Telefone	Website
-academias	RS	Canoas	Não especificado	Academia Canoas Fit	Rua Araçá 428, Canoas, RS	(51) 3051-5002	N/A
-academias	RS	Canoas	Não especificado	Academia Superação	Rua XV de Janeiro 100, Canoas	(51) 99999-9999	N/A
+| Termo     | Estado | Cidade | Bairro           | Nome                 | Endereço                         | Telefone       | Website |
+|-----------|--------|--------|------------------|----------------------|----------------------------------|----------------|---------|
+| academias | RS     | Canoas | Não especificado | Academia Canoas Fit  | Rua Araçá 428, Canoas, RS        | (51) 3051-5002 | N/A     |
+| academias | RS     | Canoas | Não especificado | Academia Superação   | Rua XV de Janeiro 100, Canoas    | (51) 99999-9999| N/A     |
+
 
 ## 🧩 Melhorias futuras sugeridas
 - Implementação de interface web (Flask/Streamlit).
