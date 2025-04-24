@@ -70,7 +70,7 @@ Busca específica por bairros:
 scrapy crawl bing_maps -a termo="cafés" -a estado="RS" -a cidade="Porto Alegre" -a bairros="Centro Histórico,Moinhos de Vento"
 ```
 
-**📦 Resultados**
+## 📦 Resultados
 Os resultados serão salvos automaticamente em arquivos Excel na pasta results/, nomeados conforme data e hora da execução.
 
 Exemplo de saída:
@@ -79,14 +79,14 @@ Termo	Estado	Cidade	Bairro	Nome	Endereço	Telefone	Website
 academias	RS	Canoas	Não especificado	Academia Canoas Fit	Rua Araçá 428, Canoas, RS	(51) 3051-5002	N/A
 academias	RS	Canoas	Não especificado	Academia Superação	Rua XV de Janeiro 100, Canoas	(51) 99999-9999	N/A
 
-**🧩 Melhorias futuras sugeridas**
+## 🧩 Melhorias futuras sugeridas
 - Implementação de interface web (Flask/Streamlit).
 - Suporte a proxies ou delays para evitar bloqueios do Bing Maps.
 - Dockerização da aplicação.
 - Automação de execução com GitHub Actions (CI/CD).
 
-**📝 Contribuindo**
+## 📝 Contribuindo
 Contribuições são bem-vindas! Para contribuir, abra uma issue ou envie um pull request.
 
-**📜 Licença**
+## 📜 Licença
 MIT License
