@@ -1,0 +1,52 @@
+[
+  {
+    "termo_busca": "academias",
+    "estado": "RS",
+    "cidade": "Porto Alegre",
+    "bairro": "Centro",
+    "nome": "Academia Fitness Plus",
+    "endereco": "Rua Example, 123 - Centro, Porto Alegre - RS",
+    "telefone": "(51) 3333-4444",
+    "website": "https://example.com"
+  },
+  {
+    "termo_busca": "academias",
+    "estado": "RS",
+    "cidade": "Porto Alegre",
+    "bairro": "Moinhos de Vento",
+    "nome": "Corpo em Forma Academia",
+    "endereco": "Av. Principal, 456 - Moinhos de Vento, Porto Alegre - RS",
+    "telefone": "(51) 9999-8888",
+    "website": "https://corpoemforma.com.br"
+  },
+  {
+    "termo_busca": "academias",
+    "estado": "RS",
+    "cidade": "Porto Alegre",
+    "bairro": "Bela Vista",
+    "nome": "Studio Pilates Zen",
+    "endereco": "Rua das Flores, 789 - Bela Vista, Porto Alegre - RS",
+    "telefone": "Telefone não disponível",
+    "website": "https://pilateszen.com"
+  },
+  {
+    "termo_busca": "academias",
+    "estado": "RS",
+    "cidade": "Porto Alegre",
+    "bairro": "Petrópolis",
+    "nome": "CrossFit Porto Alegre",
+    "endereco": "Rua do Esporte, 321 - Petrópolis, Porto Alegre - RS",
+    "telefone": "(51) 7777-6666",
+    "website": "Website não disponível"
+  },
+  {
+    "termo_busca": "academias",
+    "estado": "RS",
+    "cidade": "Porto Alegre",
+    "bairro": "Restinga",
+    "nome": "Academia Popular",
+    "endereco": "Rua Simples, 100 - Restinga, Porto Alegre - RS",
+    "telefone": "Telefone não disponível",
+    "website": "Website não disponível"
+  }
+]
