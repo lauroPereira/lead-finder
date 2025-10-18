@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  # Serviço principal do Lead Scraper
+  lead-scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lead-scraper-app
+    volumes:
+      # Volume para dados de saída
+      - ./data:/app/data
+      # Volume para desenvolvimento (hot reload)
+      - ./lead_scraper:/app/lead_scraper
+      - ./tests:/app/tests
+    environment:
+      - PYTHONPATH=/app
+      - SCRAPY_SETTINGS_MODULE=lead_scraper.settings
+    networks:
+      - lead-scraper-network
+    # Comando padrão para desenvolvimento
+    command: tail -f /dev/null
+    
+  # Serviço para testes
+  lead-scraper-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lead-scraper-test
+    volumes:
+      - ./lead_scraper:/app/lead_scraper
+      - ./tests:/app/tests
+      - ./htmlcov:/app/htmlcov
+    environment:
+      - PYTHONPATH=/app
+    networks:
+      - lead-scraper-network
+    command: pytest --cov=lead_scraper --cov-report=html --cov-report=term-missing
+    depends_on:
+      - lead-scraper
+
+  # Serviço para desenvolvimento com Jupyter (opcional)
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lead-scraper-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/app/notebooks
+      - ./data:/app/data
+      - ./lead_scraper:/app/lead_scraper
+    environment:
+      - PYTHONPATH=/app
+    networks:
+      - lead-scraper-network
+    command: >
+      bash -c "pip install jupyter pandas matplotlib seaborn &&
+               jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/app/notebooks"
+    profiles:
+      - dev
+
+networks:
+  lead-scraper-network:
+    driver: bridge
+
+volumes:
+  # Volume persistente para dados
+  lead-scraper-data:
+    driver: local
